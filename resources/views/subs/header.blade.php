@@ -17,7 +17,9 @@
         {{-- Nav --}}
         <div class="wrapper">
             <div class="logo-pic-container">
-                <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="DC Logo">
+                <a href="/">
+                    <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="DC Logo">
+                </a>
             </div>
 
             {{-- Links --}}
