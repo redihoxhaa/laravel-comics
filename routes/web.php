@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::get('/comics', function () {
     return view('comics');
 });
+Route::get('/comics-0', function () {
+    return view('single_comics.comics0');
+});

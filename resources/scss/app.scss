@@ -301,6 +301,164 @@
 
 /* #endregion BLUEBAR */
 
+/* #region SINGLE COMIC */
+
+.comic-blue-bar {
+    padding: 30px 0;
+    background-color: $main-color;
+
+    .comic.cover.wrapper {
+        position: relative;
+        max-width: 1100px;
+
+        .pic-container {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            transform: translate(20%, 5%);
+            width: 150px;
+        }
+    }
+
+}
+
+.comic.wrapper {
+    display: block;
+    max-width: 1100px;
+    padding: 30px 0;
+
+    .advertisement {
+        width: 100%;
+        text-align: end;
+        text-transform: uppercase;
+    }
+
+    .board.row {
+
+        .col-9 {
+
+            h2 {
+                color: #003656;
+            }
+
+            .info-bar {
+                background-color: #55ba59;
+                color: white;
+                border-bottom: 1px solid gray;
+                margin: 0;
+
+
+                span {
+                    padding: 10px 0;
+                    white-space: nowrap;
+
+                }
+
+
+
+                i {
+                    padding-left: 10px;
+                }
+            }
+
+            .col-9 {
+                padding: 0px 20px;
+                border-right: 1px solid gray;
+
+                .currency,
+                .availability {
+                    color: #9fe7a2;
+                }
+            }
+
+            p {
+                color: gray;
+                padding: 10px 0;
+            }
+        }
+    }
+
+}
+
+.infos-wrapper {
+
+    background-color: rgb(247, 247, 247);
+    border-top: 1px solid rgb(207, 207, 207);
+    border-bottom: 1px solid rgb(207, 207, 207);
+
+    .top-infos.row {
+        justify-content: space-between;
+        color: #003656;
+        padding-bottom: 100px;
+
+        .custom-col {
+            width: 48%;
+
+            h4 {
+                padding-bottom: 20px;
+
+                margin: 0;
+            }
+
+            .row {
+                margin: 0;
+
+                &:first-of-type {
+                    border-top: 1px solid rgb(207, 207, 207);
+                }
+
+                border-bottom: 1px solid rgb(207, 207, 207);
+                padding: 10px 0;
+
+                .col-3,
+                .col-9 {
+                    padding: 0;
+                }
+
+                a {
+                    color: $main-color;
+                }
+
+                .authors {
+                    color: $main-color;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+.bottom-infos.row {
+    background-color: rgb(247, 247, 247);
+
+    .wrapper {
+
+        width: 1200px;
+        margin: 0 auto;
+
+        .col-3 {
+            color: rgb(207, 207, 207);
+
+            .pic-container {
+                filter: invert(1) opacity(0.2);
+                width: 35px;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+
+/* #endregion SINGLE COMIC */
+
 /* #endregion MAIN */
 
 /* #region FOOTER */
