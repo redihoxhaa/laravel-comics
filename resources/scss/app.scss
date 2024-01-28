@@ -1,7 +1,409 @@
 @import "~bootstrap/scss/bootstrap";
+
+// Font-Awesome
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+
 @import "_partials/reset.scss";
 @import "_partials/common.scss";
 @import "_partials/components.scss";
 @import "_partials/typography.scss";
 @import "_partials/utilities.scss";
 @import "_partials/variables.scss";
+@import "_partials/mixins.scss";
+
+/* #region HEADER */
+
+.top-bar {
+    background-color: $main-color;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 5px 0;
+
+    ul {
+        gap: 65px;
+    }
+
+    i {
+        padding-left: 3px;
+    }
+}
+
+.logo-pic-container {
+    padding: 20px 0;
+    width: 80px;
+}
+
+.top-nav {
+    display: flex;
+    list-style-type: none;
+    text-transform: uppercase;
+    gap: 35px;
+    padding: 0 20px;
+
+    li {
+        position: relative;
+        text-transform: uppercase;
+
+        i {
+            color: $main-color;
+            padding-left: 5px;
+        }
+
+        &:hover {
+            color: $main-color;
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 5px;
+                background-color: $main-color;
+                position: absolute;
+                top: 67px;
+                left: 0;
+            }
+        }
+    }
+
+}
+
+.search-bar {
+    width: 12%;
+    text-align: end;
+    border-bottom: 2px solid $main-color;
+
+    i {
+        padding-left: 5px;
+
+    }
+}
+
+.jumbotron {
+    height: 400px;
+    @include background-placer('../../resources/img/jumbotron.jpg', cover, top, no-repeat);
+}
+
+/* #endregion HEADER */
+
+
+/* #region MAIN */
+
+/* #region HOMEPAGE */
+
+.last-comics {
+    background-color: $main-color;
+    padding: 20px 0;
+
+    h2 {
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 60px;
+
+        a {
+            text-decoration: underline;
+        }
+
+        &::after {
+            content: '---';
+            padding-left: 30px;
+        }
+
+        &::before {
+            content: '---';
+            padding-right: 30px;
+        }
+    }
+}
+
+.home.wrapper {
+    display: block;
+    padding: 20px 0;
+
+    h1 {
+        text-transform: uppercase;
+        color: $main-color;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        padding: 40px 0px;
+    }
+
+    p {
+        padding: 20px 0 0;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
+    }
+
+    section {
+        text-align: center;
+        padding: 20px 0;
+
+        h2 {
+            color: $main-color;
+            text-transform: uppercase;
+        }
+    }
+}
+
+/* #endregion HOMEPAGE */
+
+/* #region COMICS */
+
+.comics-main {
+    background-color: $products-bg;
+
+    .wrapper {
+        position: relative;
+        justify-content: center;
+    }
+
+    .comics.wrapper {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 12px;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin: 50px 0;
+            gap: 30px;
+
+            li {
+                width: calc((100% - 150px) / 6);
+
+                .pic-container {
+                    width: 100%;
+                    aspect-ratio: 1 / 1;
+                    overflow: hidden;
+                }
+
+                .comic-title {
+
+                    h5 {
+                        color: white;
+                        font-family: 'Open Sans', sans-serif;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        margin-top: 20px;
+                        font-size: 14px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    span {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+    }
+
+    h3 {
+        color: white;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        background-color: $main-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(30px, -50%);
+        font-size: 1.5rem;
+        z-index: 999;
+        font-weight: 600;
+
+    }
+
+    .wrapper {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 12px;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin: 50px 0;
+            gap: 30px;
+
+            li {
+                width: calc((100% - 150px) / 6);
+
+            }
+        }
+    }
+
+    button {
+
+        margin-bottom: 30px;
+
+        a {
+            color: white;
+            text-transform: uppercase;
+            padding: 10px 60px;
+            background-color: $main-color;
+            font-family: 'Asap Condensed', sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+    }
+}
+
+/* #endregion COMICS */
+
+/* #region BLUEBAR */
+
+.blue-links {
+    background-color: $main-color;
+    padding: 50px 0;
+}
+
+.blue-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .pic-container {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+
+            img {
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        span {
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 100;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+    }
+}
+
+/* #endregion BLUEBAR */
+
+/* #endregion MAIN */
+
+/* #region FOOTER */
+
+.top-footer {
+    background-image: url(../img/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .main.wrapper {
+        background-image: url(../img/dc-logo-bg.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        display: flex;
+        flex-direction: column;
+
+
+        .upper-section.wrapper {
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            padding: 0;
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+                padding: 40px 0 25px;
+                width: 14%;
+
+                ul {
+                    display: flex;
+
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 4px;
+
+
+                    li {
+                        font-size: 14px;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 500;
+                        color: $light-gray;
+
+                        &:first-child {
+                            font-family: 'Asap Condensed', sans-serif;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            font-size: 1.5rem;
+                            margin-bottom: 10px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright.wrapper {
+            width: 100%;
+            padding: 0 0 25px 0;
+
+        }
+
+    }
+
+    p {
+        color: $light-gray;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+
+        a {
+            color: $main-color;
+        }
+    }
+}
+
+.bottom-footer {
+    background-color: $dark-gray;
+
+    button {
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 2px solid $main-color;
+        color: white;
+        padding: 15px;
+        margin: 30px 0;
+        font-size: 1.125rem;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .follow-us {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .call-to-action {
+            text-transform: uppercase;
+            color: $main-color;
+            font-weight: 600;
+            font-size: 20px;
+        }
+    }
+}
+
+
+/* #endregion FOOTER */

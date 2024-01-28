@@ -5,18 +5,16 @@
 
 <body>
 
-    <div class="container">
-        <header>
-            @yield('header')
-        </header>
+    <div>
 
-        <main>
-            @yield('main')
-        </main>
+        @yield('header')
 
-        <footer>
-            @yield('footer')
-        </footer>
+        @yield('main')
+
+        @yield('bluebar')
+
+        @yield('footer')
+
     </div>
 
 

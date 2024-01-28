@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -9,7 +20,11 @@ li {
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+img {
+    display: block;
+    width: 100%;
+}
+
+button {
+    border: none;
 }
