@@ -10,13 +10,13 @@
 
             <div class="comics wrapper">
                 <ul class="products">
-                    @foreach (config('comics') as $comic)
+                    @foreach (config('comics') as $index => $comic)
                         <li>
-                            {{-- <AppProduct :img="product.thumb" :title="product.series" /> --}}
                             <div class="pic-container">
-                                <a href="#"> <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}"></a>
+                                <a href="/comics-{{ $index }}"> <img src="{{ $comic['thumb'] }}"
+                                        alt="{{ $comic['title'] }}"></a>
                             </div>
-                            <a class="comic-title" href="#">
+                            <a class="comic-title" href="/comics-{{ $index }}">>
                                 <h5>{{ $comic['title'] }}</h5>
                             </a>
                         </li>

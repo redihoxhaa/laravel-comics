@@ -4,9 +4,14 @@
 
 @section('main')
     <main>
+
+        {{-- Call to action section --}}
         <section class="last-comics">
             <h2><a href="/comics">Take a look at the last comics! </a></h2>
         </section>
+        {{-- /Call to action section --}}
+
+        {{-- Welcome message --}}
         <div class="home wrapper">
             <h1>Unleash the Extraordinary: Explore the New DC Comics Universe</h1>
             <p>Welcome to the epicenter of extraordinary storytelling and iconic heroes – the all-new DC Comics! Immerse
@@ -37,13 +42,18 @@
                 panel tells a story, and every story is a legend in the making.
 
                 Welcome to the new era of DC Comics – where imagination has no limits, and heroes are forever.</p>
-
         </div>
+        {{-- Welcome message --}}
 
+
+        {{-- Decoration banner --}}
         <div class="pic-container">
             <img src="{{ Vite::asset('resources/img/banner.jpg') }}" alt="DC Banner">
         </div>
+        {{-- /Decoration banner --}}
 
+
+        {{-- More sections --}}
         <div class="home wrapper">
 
             <section id="welcome">
@@ -78,6 +88,7 @@
                     Unleash your inner hero and witness the power of storytelling that transcends the ordinary...</p>
             </section>
         </div>
+        {{-- /More sections --}}
 
     </main>
 @endsection

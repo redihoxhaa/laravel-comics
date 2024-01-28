@@ -9,7 +9,7 @@
         <div class="comic-blue-bar">
             <div class="comic cover wrapper">
                 <div class="pic-container">
-                    <img src="{{ config('comics.0.thumb') }}" alt="DC Banner">
+                    <img src="{{ config('comics.2.thumb') }}" alt="DC Banner">
                 </div>
             </div>
         </div>
@@ -21,12 +21,12 @@
             <div class="advertisement">Advertisement</div>
             <div class="board row">
                 <div class="col-9">
-                    <h2 class="text-uppercase pb-3 fw-bold">{{ config('comics.0.title') }}</h2>
+                    <h2 class="text-uppercase pb-3 fw-bold">{{ config('comics.2.title') }}</h2>
                     <div class="info-bar row">
                         <div class="col-9 d-flex justify-content-between align-items-center">
                             <div class="price">
                                 <span class="currency"> U.S. Price:</span>
-                                <span>{{ config('comics.0.price') }}</span>
+                                <span>{{ config('comics.2.price') }}</span>
 
                             </div>
                             <span class="availability">AVAILABLE</span>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
 
-                    <p>{{ config('comics.0.description') }}</p>
+                    <p>{{ config('comics.2.description') }}</p>
                 </div>
                 <div class="col-3">
                     <div class="pic-container">
@@ -74,15 +74,15 @@
                         <h4 class="fw-bold">Specs</h4>
                         <div class="row">
                             <div class="col-3">Series:</div>
-                            <div class="col-9 text-uppercase"><a href="#">{{ config('comics.0.series') }}</a></div>
+                            <div class="col-9 text-uppercase"><a href="#">{{ config('comics.2.series') }}</a></div>
                         </div>
                         <div class="row">
                             <div class="col-3">U.S. Price:</div>
-                            <div class="col-9">{{ config('comics.0.price') }}</div>
+                            <div class="col-9">{{ config('comics.2.price') }}</div>
                         </div>
                         <div class="row">
                             <div class="col-3">On Sale Date:</div>
-                            <div class="col-9">{{ \Carbon\Carbon::parse(config('comics.0.sale_date'))->format('M d Y') }}
+                            <div class="col-9">{{ \Carbon\Carbon::parse(config('comics.2.sale_date'))->format('M d Y') }}
                             </div>
                         </div>
                     </div>

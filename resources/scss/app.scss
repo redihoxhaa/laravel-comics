@@ -304,7 +304,6 @@
 /* #region SINGLE COMIC */
 
 .comic-blue-bar {
-    padding: 30px 0;
     background-color: $main-color;
 
     .comic.cover.wrapper {
@@ -313,7 +312,7 @@
 
         .pic-container {
             position: absolute;
-            bottom: 100%;
+            bottom: 50%;
             left: 0;
             transform: translate(20%, 5%);
             width: 150px;
@@ -430,7 +429,7 @@
 
 }
 
-.bottom-infos.row {
+.bottom-links.row {
     background-color: rgb(247, 247, 247);
 
     .wrapper {
@@ -439,7 +438,25 @@
         margin: 0 auto;
 
         .col-3 {
-            color: rgb(207, 207, 207);
+            color: rgb(192, 192, 192);
+            border-left: 1px solid rgb(207, 207, 207);
+            padding: 0 15px;
+            height: 100%;
+
+            &:last-of-type {
+                border-right: 1px solid rgb(207, 207, 207);
+                ;
+            }
+
+            span,
+            .pic-container {
+                padding: 10px 0;
+            }
+
+            span {
+                font-weight: bold;
+                font-size: 14px;
+            }
 
             .pic-container {
                 filter: invert(1) opacity(0.2);
